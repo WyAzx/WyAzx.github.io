@@ -359,10 +359,7 @@ height:50vh;
                 <span>python datetime时区设置</span>
         </a>
         <div class="abstract-content">
-            python利用pytz创建datetime由于时区offset多年来有所改变，当利用pytz构建timezone时区域名称和偏移量默认为最早使用时的值
-12pytz.timezone('America/New_York')# output &lt;DstTzInfo 'America/New_York' LMT-1 day, 19:04:00 STD&gt;
-当使用replac方法赋给datetime时区信息时，会使用默认偏移量和区域名称，因此产生分钟数
-12345# dt = datetime.datetime(2018, 6, 27, 10, 0)dt.replace(tzinf...
+            python利用datetime replace方法使用pytz赋给datetime对象时区时会出现时区offset出现多余的分钟数
         </div>
         <div class="abstract-post-meta">
             <!-- date  -->
