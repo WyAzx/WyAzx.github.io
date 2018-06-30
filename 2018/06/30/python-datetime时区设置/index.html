@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Stenis;Gate</title>
+    <title>python datetime时区设置 · Stenis;Gate</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -70,6 +70,8 @@
 
     <link rel="preload" href= /css/style.css?v=20180604 as="style" onload="this.onload=null;this.rel='stylesheet'" />
     <link rel="stylesheet" href= /css/mobile.css?v=20180604 media="(max-width: 980px)">
+    
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     
     <!-- /*! loadCSS. [c]2017 Filament Group, Inc. MIT License */
 /* This file is meant as a standalone workflow for
@@ -194,12 +196,23 @@
 </head>
 
     
+        <body class="post-body">
+    
     
 <header class="header">
 
     <div class="read-progress"></div>
     <div class="header-sidebar-menu">&#xe775;</div>
     <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >Stenis;Gate</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">python datetime时区设置</a>
+            </div>
+    </div>
     
     <a class="home-link" href=/>Stenis;Gate</a>
 </header>
@@ -213,24 +226,74 @@
 
 
 
+height:50vh;
+
 >
     
     <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
             
     <div class="site-intro-placeholder"></div>
-    <div class="site-intro-img" style="background-image: url(/)"></div>
+    <div class="site-intro-img" style="background-image: url(/intro/post-bg.jpg)"></div>
     <div class="site-intro-meta">
         <!-- 标题  -->
         <h1 class="intro-title">
             <!-- 主页  -->
+            
+            python datetime时区设置
+            <!-- 404 -->
             
         </h1>
         <!-- 副标题 -->
         <p class="intro-subtitle">
             <!-- 主页副标题  -->
             
+            
+            <!-- 404 -->
+            
         </p>
         <!-- 文章页meta -->
+        
+            <div class="post-intros">
+                <!-- 文章页标签  -->
+                
+                    <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
+    
+</div>
+                
+                
+                    <div class="post-intro-read">
+                        <span>Word count: <span class="post-count">254</span> / Reading time: <span class="post-count">1 min</span></span>
+                    </div>
+                
+                <div class="post-intro-meta">
+                    <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                    <span class="post-intro-time">2018/06/30</span>
+                    
+                    <span id="busuanzi_container_page_pv" class="busuanzi-pv">
+                        <span class="iconfont-archer">&#xe602;</span>
+                        <span id="busuanzi_value_page_pv"></span>
+                    </span>
+                    
+                    <span class="shareWrapper">
+                        <span class="iconfont-archer shareIcon">&#xe71d;</span>
+                        <span class="shareText">Share</span>
+                        <ul class="shareList">
+                            <li class="iconfont-archer share-qr" data-type="qr">&#xe75b;
+                                <div class="share-qrcode"></div>
+                            </li>
+                            <li class="iconfont-archer" data-type="weibo">&#xe619;</li>
+                            <li class="iconfont-archer" data-type="qzone">&#xe62e;</li>
+                            <li class="iconfont-archer" data-type="twitter">&#xe634;</li>
+                            <li class="iconfont-archer" data-type="facebook">&#xe67a;</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
         
     </div>
 </div>
@@ -331,69 +394,46 @@
 </script>        
         <img class="loading" src="/assets/loading.svg" style="display: block; margin: 6rem auto 0 auto; width: 6rem; height: 6rem;" />
         <div class="container container-unloaded">
-            <main class="main index-page">
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/06/30/python-datetime时区设置/" >
-            
-                <span>python datetime时区设置</span>
-        </a>
-        <div class="abstract-content">
-            python利用pytz创建datetime由于时区offset多年来有所改变，当利用pytz构建timezone时区域名称和偏移量默认为最早使用时的值
-12pytz.timezone('America/New_York')# output &lt;DstTzInfo 'America/New_York' LMT-1 day, 19:04:00 STD&gt;
-当使用replac方法赋给datetime时区信息时，会使用默认偏移量和区域名称，因此产生分钟数
-12345# dt = datetime.datetime(2018, 6, 27, 10, 0)dt.replace(tzinf...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/30</span>
-            </div>
-            <!-- tags  -->
-            
-            <div class= abstract-tags >
-    
-        <a class="post-tag" href="javascript:void(0);" data-tags = "python">python</a>
-    
-</div>
-            
-        </div>
+            <main class="main post-page">
+    <article class="article-entry">
+        <h1 id="python利用pytz创建datetime"><a href="#python利用pytz创建datetime" class="headerlink" title="python利用pytz创建datetime"></a>python利用pytz创建datetime</h1><p>由于时区offset多年来有所改变，当利用<code>pytz</code>构建<code>timezone</code>时区域名称和偏移量默认为最早使用时的值</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pytz.timezone(<span class="string">'America/New_York'</span>)</span><br><span class="line"><span class="comment"># output &lt;DstTzInfo 'America/New_York' LMT-1 day, 19:04:00 STD&gt;</span></span><br></pre></td></tr></table></figure>
+<p>当使用<code>replac</code>方法赋给<code>datetime</code>时区信息时，会使用默认偏移量和区域名称，因此产生分钟数</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># dt = datetime.datetime(2018, 6, 27, 10, 0)</span></span><br><span class="line">dt.replace(tzinfo=pytz.timezone(<span class="string">'America/New_York'</span>))</span><br><span class="line"><span class="comment"># output datetime.datetime(2018, 6, 27, 10, 0, tzinfo=&lt;DstTzInfo 'America/New_York' LMT-1 day, 19:04:00 STD&gt;)</span></span><br><span class="line">dt.astimezone(pytz.utc)</span><br><span class="line"><span class="comment"># output datetime.datetime(2018, 6, 27, 14, 56, tzinfo=&lt;UTC&gt;)</span></span><br></pre></td></tr></table></figure>
+<p>而使用<code>pytz.locallize</code>会根据datetime的日期赋予适当的偏移量与时区名称</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">tz = pytz.timezone(<span class="string">'America/New_York'</span>)</span><br><span class="line">tz.localize(datetime(<span class="number">2018</span>, <span class="number">6</span>, <span class="number">27</span>, <span class="number">14</span>, <span class="number">56</span>))</span><br><span class="line"><span class="comment"># output datetime.datetime(2018, 6, 27, 14, 56, tzinfo=&lt;DstTzInfo 'America/New_York' EDT-1 day, 20:00:00 DST&gt;)</span></span><br><span class="line"></span><br><span class="line">tz.localize(datetime(<span class="number">1901</span>, <span class="number">7</span>, <span class="number">10</span>, <span class="number">12</span>, <span class="number">0</span>))</span><br><span class="line"><span class="comment"># output datetime.datetime(1901, 7, 10, 12, 0, tzinfo=&lt;DstTzInfo 'America/New_York' LMT-1 day, 19:04:00 STD&gt;)</span></span><br></pre></td></tr></table></figure>
+<p>因此在构建带时区的datetime的时候应该使用<code>locallize</code>方法v</p>
+
     </article>
-    
-    
-    
-    
-    
-    
-    <article class="index-post">
-        <a class="abstract-title" href = "/2018/06/16/hello-world/" >
-            
-                <span>Hello World</span>
-        </a>
-        <div class="abstract-content">
-            Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick StartCreate a new post1$ hexo new "My New Post"
-More info: Writing
-Run server1$ hexo server
-More...
-        </div>
-        <div class="abstract-post-meta">
-            <!-- date  -->
-            <div class="abstract-date">
-                <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/06/16</span>
-            </div>
-            <!-- tags  -->
-            
-        </div>
-    </article>
+    <!-- license  -->
     
     <!-- paginator  -->
+    <ul class="post-paginator">
+        <li class="next">
+            
+        </li>
+        <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/06/16/hello-world/" title= Hello World >
+                    <div class="prevTitle">Hello World</div>
+                </a>
+            
+        </li>
+    </ul>
+    <!-- 评论插件 -->
+    <!-- 来必力City版安装代码 -->
+
+<!-- City版安装代码已完成 -->
     
+    
+    <!--PC版-->
+
+    <!--PC版-->
+
+
+    
+    <!-- 评论 -->
 </main>
             <!-- profile -->
             
@@ -470,6 +510,24 @@ More...
 </footer>
     </div>
     <!-- toc -->
+    
+    <div class="toc-wrapper" style=
+    
+
+
+
+
+
+
+
+top:50vh;
+
+    >
+        <div class="toc-catalog">
+            <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
+        </div>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#python利用pytz创建datetime"><span class="toc-number">1.</span> <span class="toc-text">python利用pytz创建datetime</span></a></li></ol>
+    </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
     <div class="sidebar sidebar-hide">
@@ -631,6 +689,8 @@ jsonContent:
     
     </div>
     <!-- async load share.js -->
+    
+        <script src="/scripts/share.js" async></script>    
      
     </body>
 </html>
